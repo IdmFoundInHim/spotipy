@@ -778,10 +778,10 @@ class Spotify(object):
                 - name - the name of the playlist
         """
         warnings.warn(
-            "You should use `current_user_unfollow_playlist(playlist_id)` instead",
+            "You should use `playlist_unfollow(playlist_id)` instead",
             DeprecationWarning,
         )
-        return self.current_user_unfollow_playlist(playlist_id)
+        return self.playlist_unfollow(playlist_id)
 
     def user_playlist_add_tracks(
         self, user, playlist_id, tracks, position=None
@@ -910,10 +910,10 @@ class Spotify(object):
 
         """
         warnings.warn(
-            "You should use `current_user_follow_playlist(playlist_id)` instead",
+            "You should use `playlist_follow(playlist_id)` instead",
             DeprecationWarning,
         )
-        return self.current_user_follow_playlist(playlist_id)
+        return self.playlist_follow(playlist_id)
 
     def user_playlist_is_following(
         self, playlist_owner_id, playlist_id, user_ids
@@ -965,7 +965,7 @@ class Spotify(object):
             "playlists/%s" % (playlist_id), payload=data
         )
 
-    def current_user_unfollow_playlist(self, playlist_id):
+    def playlist_unfollow(self, playlist_id):
         """ Unfollows (deletes) a playlist for the current authenticated
             user
 
@@ -1091,7 +1091,7 @@ class Spotify(object):
             "playlists/%s/tracks" % (plid), payload=payload
         )
 
-    def current_user_follow_playlist(self, playlist_id):
+    def playlist_follow(self, playlist_id):
         """
         Add the current authenticated user as a follower of a playlist.
 

@@ -69,15 +69,15 @@ class SpotipyPlaylistApiTest(unittest.TestCase):
         self.assertGreaterEqual(len(playlists['items']), 1)
         self.assertLessEqual(len(playlists['items']), 10)
 
-    def test_current_user_follow_playlist(self):
+    def test_playlist_follow(self):
         playlist_to_follow_id = '4erXB04MxwRAVqcUEpu30O'
-        self.spotify.current_user_follow_playlist(playlist_to_follow_id)
+        self.spotify.playlist_follow(playlist_to_follow_id)
         follows = self.spotify.playlist_is_following(
             playlist_to_follow_id, [self.username])
 
         self.assertTrue(len(follows) == 1, 'proper follows length')
         self.assertTrue(follows[0], 'is following')
-        self.spotify.current_user_unfollow_playlist(playlist_to_follow_id)
+        self.spotify.playlist_unfollow(playlist_to_follow_id)
 
         follows = self.spotify.playlist_is_following(
             playlist_to_follow_id, [self.username])

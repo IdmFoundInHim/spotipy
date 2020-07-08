@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Deprecated
 
 - `user_playlist_change_details` in favor of `playlist_change_details`
-- `user_playlist_unfollow` in favor of `current_user_unfollow_playlist`
+- `user_playlist_unfollow` in favor of `playlist_unfollow`
 - `user_playlist_add_tracks` in favor of `playlist_add_items`
 - `user_playlist_replace_tracks` in favor of `playlist_replace_items`
 - `user_playlist_reorder_tracks` in favor of `playlist_reorder_items`
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `user_playlist_remove_specific_occurrences_of_tracks` in favor of
  `playlist_remove_specific_occurrences_of_items`
 - `user_playlist_follow_playlist` in favor of
- `current_user_follow_playlist`
+ `playlist_follow`
 - `user_playlist_is_following` in favor of `playlist_is_following`
 - `playlist_tracks` in favor of `playlist_items`
 
